@@ -1,27 +1,6 @@
 # IframeCropper
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+iframe 내부에서 외부 화면을 크롭 가능한지 테스트하는 레포입니다.  
+결론 : 불가능 (당연히 CORS때문에 안된다)  
+외부에서 화면을 캡쳐한 후에 내부로 DataURL을 보내주는 방식 말고는 딱히 해법이 보이지 않습니다.  
+지금 이 기능을 위해 [cropperjs](https://github.com/fengyuanchen/cropperjs), [html2canvas](http://html2canvas.hertzen.com/) 두 라이브러리를 사용했는데  
+둘 다 cdn으로 불러올 수 있고, 용량이 그리 크지 않아(kb단위) 사용해도 무방할 것으로 보입니다.  
